@@ -1,0 +1,279 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0066cc;
+    color: #fff;
+}
+nav ul {
+    display: flex;
+    list-style: none;
+    background-color:black;
+    padding: 10px;
+    justify-content: center;
+    font-family: sans-serif;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    color: #ff9800;
+    text-decoration: underline;
+}
+
+.hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #0066cc; /* Light blue */
+}
+/* styles.css */
+
+
+.hero video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.3;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+
+.hero-gif {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 300px;
+    height: auto;
+    opacity: 0.7;
+}
+
+/* Add this to your existing CSS or in styles.css */
+
+/* Add this to your existing CSS or in styles.css */
+
+.hero-secondary-gif {
+    position: absolute;
+    left: 20px; /* Adjust as needed */
+    bottom: 20px; /* Adjust as needed */
+    width: 150px; /* Adjust as needed */
+    height: auto; /* Maintain aspect ratio */
+    z-index: 1; /* Ensure it's above the background */
+    border-radius: 10px; /* Add border radius for a cool effect */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add shadow for depth */
+}
+
+
+/* Adjust other styles as needed */
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ff9800;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    animation: fade-in 2s ease-in-out;
+}
+
+@keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+#about {
+    background-color: #222;
+    color: #fff;
+    padding: 60px 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #9933cc; /* Purple */
+}
+
+.about-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.about-gif {
+    width: 200px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.about-text {
+    max-width: 600px;
+    text-align: left;
+}
+
+.about-text h2 {
+    color: #ff9800;
+}
+
+#projects {
+    background-color: #cc0000; /* Red */
+    color: #fff;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.project-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.project {
+    background: #444;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 300px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.project-img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.project-info h3 {
+    color: #ff9800;
+}
+
+#skills {
+    background-color:black;
+    color: #fff;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.skill-circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: lightcoral;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    color: #fff;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.skill-circle::after {
+    content: attr(data-skill) '%';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+            transform: translate(-50%, -50%)}
+.skills-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.skill {
+    margin: 30px;
+    text-align: center;
+}
+
+
+
+#testimonials {
+    background-color: #e6e600; /* Yellow */
+    color: #333;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.carousel {
+    display: flex;
+    justify-content: center;
+}
+
+.testimonial {
+    background: #444;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 5px;
+    max-width: 300px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    color: white;
+}
+
+#contact {
+    background-color: #ff6600; /* Orange */
+    color: #fff;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contact-form input, #contact-form textarea {
+    width: 100%;
+    max-width: 500px;
+    margin: 10px 0;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+#contact-form button {
+    background-color: #ff9800;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#contact-form button:hover {
+    background-color: #e68a00;
+}
+
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+    }
+    
+    .about-gif {
+        margin-bottom: 20px;
+    }
+}
+
