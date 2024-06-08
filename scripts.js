@@ -173,20 +173,39 @@ window.addEventListener('scroll', () => {
         }
     });
 });
-// scripts.js
-document.addEventListener("DOMContentLoaded", () => {
-    const toggleButton = document.getElementById("toggle-button");
-    const toggleImage = document.getElementById("toggle-image");
+document.addEventListener('DOMContentLoaded', function() {
+    // Typed.js configuration
+    var typed = new Typed('#typed', {
+        strings: ["I create stunning websites.", "I build user-friendly interfaces.", "Let's collaborate!"],
+        typeSpeed: 50,
+        backSpeed: 25,
+        loop: true
+    });
 
-    toggleButton.addEventListener("click", () => {
-        if (toggleImage.style.display === "none") {
-            toggleImage.style.display = "block";
-            toggleButton.textContent = "Hide Image";
-        } else {
-            toggleImage.style.display = "none";
-            toggleButton.textContent = "Show Image";
-        }
+    // Smooth scroll for navigation
+    document.querySelectorAll('nav ul li a').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+
+    // Initialize Slick carousel
+    $('.carousel').slick({
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        adaptiveHeight: true,
+        autoplay: true,
+        autoplaySpeed: 2000,
+    });
+
+    // Skill circle animation
+    document.querySelectorAll('.skill-circle').forEach(skillCircle => {
+        let skillValue = skillCircle.getAttribute('data-skill');
+        skillCircle.style.background = `conic-gradient(#ff9800 ${skillValue}%, #333 ${skillValue}%)`;
     });
 });
-
-
