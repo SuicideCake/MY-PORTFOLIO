@@ -1,3 +1,4 @@
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -131,6 +132,7 @@ nav ul li a:hover {
     color: #ff9800;
 }
 
+
 #projects {
     background-color: #cc0000; /* Red */
     color: #fff;
@@ -138,30 +140,60 @@ nav ul li a:hover {
     text-align: center;
 }
 
+
 .project-grid {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 20px; /* Adds space between projects */
 }
 
 .project {
     background: #444;
     margin: 10px;
     padding: 20px;
-    border-radius: 5px;
+    border-radius: 10px; /* Increased border-radius for a smoother look */
     max-width: 300px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Softer shadow */
+    transition: transform 0.3s, box-shadow 0.3s; /* Animation for hover effect */
+}
+
+.project:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
 }
 
 .project-img {
     width: 100%;
     height: auto;
-    border-radius: 5px;
+    border-radius: 10px; /* Match the project's border-radius */
+    transition: opacity 0.3s; /* Smooth transition for opacity */
+}
+
+.project:hover .project-img {
+    opacity: 0.8; /* Slight fade effect on hover */
 }
 
 .project-info h3 {
     color: #ff9800;
+    margin-top: 15px; /* Space between image and title */
 }
+
+.project-info p {
+    font-size: 0.9em;
+    line-height: 1.4em;
+}
+
+.project-info a {
+    color: #ff9800;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.project-info a:hover {
+    text-decoration: underline;
+}
+
 
 #skills {
     background-color:black;
@@ -275,7 +307,6 @@ nav ul li a:hover {
         margin-bottom: 20px;
     }
 }
-
 
 .download-container {
     text-align: center;
